@@ -2001,7 +2001,7 @@ time() {
 
 npm_install() {
 	echo -e "$green 开始安装npm模块$white"
-	if [ "$dir_file" == "$openwrt_script/JD_Script" ];then
+	if [ "$dir_file" != "$openwrt_script/JD_Script" ];then
 		cp $openwrt_script/JD_Script/git_clone/lxk0301/package.json $openwrt_script/package.json
 		cd $openwrt_script && npm install && npm install -g request
 	else
